@@ -31,8 +31,7 @@ class Entity {
    * что наследуется от Entity)
    * */
   static create( data, callback = f => f ) {
-    let newData = Object.assign(data, { _method: 'PUT' })
-    console.log(newData);
+    let newData = Object.assign(data, { _method: 'PUT' });
     let xhr = createRequest({
       url: this.HOST + this.URL,
       data: newData,
