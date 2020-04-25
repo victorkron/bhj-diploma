@@ -4,4 +4,5 @@
  * Имеет свойство URL со значением '/transaction'
  * */
 class Transaction {
+  static URL = '/transaction';
 }
