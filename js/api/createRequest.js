@@ -33,6 +33,7 @@ const createRequest = (options = {}) => {
       xhr.setRequestHeader(variable, options.headers[variable]);
     }
 
+    xhr.withCredentials = true;
     xhr.responseType = options.responseType;
     xhr.send(formData);
 
