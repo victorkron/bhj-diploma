@@ -2,7 +2,6 @@
  * Класс AccountsWidget управляет блоком
  * отображения счетов в боковой колонке
  * */
- let myElement;
 class AccountsWidget {
   /**
    * Устанавливает текущий элемент в свойство element
@@ -36,11 +35,8 @@ class AccountsWidget {
       App.getModal('createAccount').open();
     });
 
-    myElement = this.element
     let arr_li = Array.from(this.element.querySelectorAll('.account'));
-
     let fun = this.onSelectAccount;
-
 
     arr_li.forEach((item, i) => {
       item.addEventListener('click', event => {
@@ -70,11 +66,12 @@ class AccountsWidget {
     }
 
 
-    this.clear();
+
     let fun = (item) => { this.renderItem(item) };
 
     Account.list(user, (err, response) => {
       if (response.success) {
+        this.clear();
         response.data.forEach((item, i) => {
           fun(item);
         });

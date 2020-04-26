@@ -12,6 +12,7 @@ class RegisterForm extends AsyncForm {
    * */
   onSubmit( options = this.submit() ) {
     let arr_input = Array.from(this.element.querySelectorAll('input'));
+    
     User.register(options.data, (err, response) => {
       if (response.success) {
         arr_input.forEach((item, i) => {
