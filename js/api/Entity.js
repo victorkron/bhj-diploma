@@ -49,7 +49,7 @@ class Entity {
    * */
   static get( id = '', data, callback = f => f ) {
     let newData = Object.assign(data, { id: id })
-    console.log(newData);
+
     let xhr = createRequest({
       url: this.HOST + this.URL,
       data: newData,
@@ -67,7 +67,7 @@ class Entity {
    * */
   static remove( id = '', data, callback = f => f ) {
     let newData = Object.assign(data, { _method: 'DELETE', id: id })
-    console.log(newData);
+    
     let xhr = createRequest({
       url: this.HOST + this.URL,
       data: newData,

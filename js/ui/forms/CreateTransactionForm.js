@@ -70,11 +70,7 @@ class CreateTransactionForm extends AsyncForm {
     //options.data.id = ;
 
     Transaction.create(options.data, (err, response) => {
-      console.log(User.current());
-      console.log(options.data);
-
       if (response.success) {
-        console.log(response);
         arr_input.forEach((item, i) => {
           item.value = '';
         });
