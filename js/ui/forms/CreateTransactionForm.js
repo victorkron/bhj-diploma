@@ -67,6 +67,7 @@ class CreateTransactionForm extends AsyncForm {
 
     options.data.account_id = select.value;
     options.data.type = type;
+    //options.data.id = ;
 
     Transaction.create(options.data, (err, response) => {
       console.log(User.current());
