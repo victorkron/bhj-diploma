@@ -25,11 +25,6 @@ class Sidebar {
       document.querySelector('body.sidebar-mini').classList.toggle('sidebar-collapse');
     });
 
-    toggleButton.addEventListener('touchend', event => {
-      //event.preventDefault();
-      document.querySelector('body.sidebar-mini').classList.toggle('sidebar-open');
-      document.querySelector('body.sidebar-mini').classList.toggle('sidebar-collapse');
-    });
   }
 
   /**
